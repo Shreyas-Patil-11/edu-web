@@ -1,0 +1,137 @@
+/* Simple responsive styles for the demo educational site */
+:root {
+    --accent: #2b7a78;
+    --muted: #6b6b6b;
+    --bg: #f6f8f9;
+    --max-width: 1024px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    margin: 0;
+    background: var(--bg)
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.logo {
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+    color: var(--accent)
+}
+
+nav {
+    display: flex;
+    gap: 1rem
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem
+}
+
+.nav-link:hover {
+    color: var(--accent)
+}
+
+.hero {
+    padding: 3rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f2fdff 100%)
+}
+
+.hero h2 {
+    margin: 0 0 .5rem;
+    font-size: 1.75rem
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: 6px;
+    text-decoration: none
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 
+
+}
+
+.feature {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #eee
+}
+
+.how {
+    background: transparent;
+    padding: 1rem 0
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #eee
+}
+
+.back {
+    margin-top: 1rem
+}
+
+.site-footer {
+    margin-top: 3rem;
+    padding: 1rem 0;
+    background: #fff;
+    border-top: 1px solid #e6e6e6
+}
+
+@media(max-width:600px) {
+    .hero h2 {
+        font-size: 1.25rem
+    }
+
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .nav-link {
+        padding: .25rem 0
+    }
+}
